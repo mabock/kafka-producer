@@ -1,18 +1,15 @@
 package com.akelius.transaction.offerintegrationhelper.offer
 
-import com.akelius.transaction.offerintegrationhelper.EventStore
 import com.akelius.transaction.offerintegrationhelper.offer.model.OfferEvent
 import com.fasterxml.jackson.databind.ObjectMapper
-import lombok.RequiredArgsConstructor
 import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.stereotype.Component
-
 import java.io.IOException
 
 @Component
-class OfferConsumer (
+class OfferConsumer(
         val eventStore: EventStore
-){
+) {
 
     private val objectMapper = ObjectMapper()
 
